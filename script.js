@@ -1,9 +1,9 @@
-//your JS code here. If required.
 // Select the output tbody
 const output = document.getElementById("output");
 
-// Step 1: Show "Loading..." initially
+// Step 1: Show "Loading..." initially (Cypress expects tr#loading)
 const loadingRow = document.createElement("tr");
+loadingRow.id = "loading"; // important for the test
 loadingRow.innerHTML = `<td colspan="2" class="text-center">Loading...</td>`;
 output.appendChild(loadingRow);
 
